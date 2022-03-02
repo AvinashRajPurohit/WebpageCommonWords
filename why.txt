@@ -1,0 +1,7 @@
+In Models:
+
+WebSiteEssentials:
+    - clean_html_content: We are mostly going to work with clean html,
+      which will avoid cleaning html content time for each operation. (Task
+    - clean_corpus_words: Instead calculating n common words again and again,
+      we will calculate words once and use many times.
