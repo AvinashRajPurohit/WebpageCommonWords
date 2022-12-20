@@ -1,4 +1,13 @@
 # Webpage Common Words
+### you can play with your web page words with this application.
+
+#### Functionalities:
+     - Adding Web Page and its html content.
+     - Preprocessing on html data (Cleaning html / remove Spacial Chars)
+     - Storing word occurrences 
+     - Deleting Web page object
+     - Update Web page object
+     
 
 
 ## Requirements
