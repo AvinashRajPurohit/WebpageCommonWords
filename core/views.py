@@ -13,7 +13,6 @@ from rest_framework import status
 
 class WebsiteEssentialCreateView(generics.CreateAPIView):
     """
-    Task: 2
     A Create API: it should take a name(website name) as POST API input,
     along with HTML encoded content. The website name should always be unique.
     """
@@ -43,7 +42,7 @@ class WebsiteEssentialCreateView(generics.CreateAPIView):
 
 class WebHtmlRetrieveView(generics.RetrieveAPIView):
     """
-    Task: 3.1 - return html content if a valid website name is given as input by user.
+    return html content if a valid website name is given as input by user.
     This api view for getting html content of website
     """
     lookup_field = 'website_name'
@@ -53,7 +52,7 @@ class WebHtmlRetrieveView(generics.RetrieveAPIView):
 
 class TopWordsRetrieveView(generics.RetrieveAPIView):
     """
-    Task: 3.2 - return top n common words if a valid website name is given as input by user.
+    return top n common words if a valid website name is given as input by user.
     This api view for getting n common words of website
     """
     lookup_field = 'website_name'
@@ -71,14 +70,14 @@ class TopWordsRetrieveView(generics.RetrieveAPIView):
         return Response({"top_n_words": str(data)}, status=status.HTTP_200_OK)
 
 
-""" Task: 3.3 I already handled as i mentioned i stored top common words before so 
+""" App pre-stored top common words before so 
     if you will add more html content it will take less time.
 """
 
 
 class WebPageDeleteView(generics.DestroyAPIView):
     """
-    Task: 4 - return html content if a valid website name is given as input by user.
+    return html content if a valid website name is given as input by user.
     This api view for getting html content of website
     """
     lookup_field = 'website_name'
@@ -87,7 +86,7 @@ class WebPageDeleteView(generics.DestroyAPIView):
 
 class WebPageUpdateView(generics.UpdateAPIView):
     """
-    Task: 5 - return html content if a valid website name is given as input by user.
+    return html content if a valid website name is given as input by user.
     This api view for getting html content of website
     """
     lookup_field = 'website_name'
@@ -99,8 +98,3 @@ class WebPageUpdateView(generics.UpdateAPIView):
 
     def patch(self, request, *args, **kwargs):
         return Response({"message": "Not Implemented"}, status=status.HTTP_501_NOT_IMPLEMENTED)
-
-
-"""
-Task: 7 is done in models.py
-"""
